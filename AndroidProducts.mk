@@ -5,10 +5,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_channel.mk
+LOCAL_PATH := device/motorola/channel/
 
-COMMON_LUNCH_CHOICES := \
-    omni_channel-user \
-    omni_channel-userdebug \
-    omni_channel-eng
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_channel.mk

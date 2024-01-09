@@ -5,8 +5,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := $(call my-dir)
+ifneq ($(filter channel,$(TARGET_DEVICE)),)
 
-ifeq ($(TARGET_DEVICE),channel)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+LOCAL_PATH := device/motorola/channel/
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
 endif
